@@ -13,27 +13,11 @@
 
  var commonCharacters = function(string1, string2) {
   var res='' ;
-  var test;
   for(var i=0;i<string1.length;i++)
   {
-    test=string1[i];
-    for(var j=0;i<string2.length;j++)
-    {
-      if(test===string2[j])
-      { 
-        res=res+string2[j];
-      }
+    if((string2.includes(string1[i])) && res.indexOf(string1[i])){
+       res=res+string1[i]
     }
-  }
-  for(var i=0;i<res.length;i++)
-  {
-    test=res[i];
-    for(var j=1;i<res.length;j++)
-    {
-      if(res[j]===test)
-      res.replace(res[j],'');
-    }
-  }
-  return(res);
 } 
-console.log();
+return(res)
+ }
