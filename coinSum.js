@@ -18,6 +18,7 @@ In other words, find all the possible combinations of coins that sum to a given 
 */
 
 // HELPERS
+<<<<<<< HEAD
 var coins = [1, 2, 5, 10, 20, 50, 100, 200];
 
 function coinSums(total) {
@@ -42,3 +43,27 @@ function coinSums(total) {
     return count;
   };
   
+=======
+var coins = [1,2,5,10,20,50,100,200];
+function coinSums (total) {
+  var sums = 0;  // this is for keeping track of all the possibilities
+  function innerRecursion(recurseIndex, leftover){
+    var current = coins[recurseIndex];
+
+    if (recurseIndex === 0){
+      if (leftover % current === 0){
+            
+
+        sums++;
+      }
+      return;
+    }
+    while (leftover >= 0){
+      innerRecursion(recurseIndex - 1, leftover);
+      leftover -= current;
+    }
+  }
+  innerRecursion(coins.length - 1, total);
+  return sums;
+}
+>>>>>>> 3057e06217ddd49177c3dad69834ba00be532e2e

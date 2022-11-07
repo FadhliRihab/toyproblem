@@ -12,6 +12,7 @@
 
 
  var commonCharacters = function(string1, string2) {
+<<<<<<< HEAD
   var res='' ;
   for(var i=0;i<string1.length;i++)
   {
@@ -21,3 +22,18 @@
 } 
 return(res)
  }
+=======
+  var result=""
+  for(var i=0;i<string1.length;i++){
+
+      if(string2.includes(string1[i])&&result.indexOf(string1[i])===-1){
+        result=result+string1[i]
+      }
+    
+  }
+return result
+  }
+  
+  
+ 
+>>>>>>> 3057e06217ddd49177c3dad69834ba00be532e2e
